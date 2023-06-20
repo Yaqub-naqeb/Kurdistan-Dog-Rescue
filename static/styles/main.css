@@ -5,7 +5,7 @@ body {
 footer {
     padding: 4rem;
     background-color: #A0C49D;
-    color: white;
+    color: black;
 }
 
 /* Navigation Bar */
@@ -20,12 +20,12 @@ footer {
 .navbar-brand {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    color: white;
+    color: black;
 }
 
 .nav-link {
     font-size: 1.2rem;
-    color: white;
+    color: black;
 }
 
 .navbar-brand:hover {
@@ -47,3 +47,27 @@ footer {
     margin: 0.5rem;
 }
 
+.hero-section {
+    background-color: #A0C49D;
+    padding: 80px 0;
+  }
+  
+.hero-title {
+font-size: 36px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+  
+.hero-subtitle {
+font-size: 18px;
+color: #555;
+margin-bottom: 30px;
+}
+  
+.hero-image {
+width: 100%;
+max-height: 400px;
+object-fit: cover;
+border-radius: 8px;
+}
+  
