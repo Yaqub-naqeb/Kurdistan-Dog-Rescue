@@ -6,6 +6,7 @@ class Post(models.Model):
     slug = models.SlugField()
     body = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    thumbnail = models.ImageField(upload_to='post_thumbnails/', default='post_thumbnails/default_thumb.png', blank=True)
 
     # add in author and thumbnail later
 
