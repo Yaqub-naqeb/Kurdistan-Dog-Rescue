@@ -1,0 +1,49 @@
+body {
+    background-color: #F7FFE5;
+}
+
+footer {
+    padding: 4rem;
+    background-color: #A0C49D;
+    color: white;
+}
+
+/* Navigation Bar */
+
+.navbar-custom {
+    background-color: #A0C49D;
+    color: black;
+  }
+
+ 
+
+.navbar-brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: black;
+}
+
+.nav-link:hover {
+    color: black;
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+.navbar-item {
+    padding: 0% 15px;
+}
+
+/* card */
+.card {
+    margin: 0.5rem;
+}
+
