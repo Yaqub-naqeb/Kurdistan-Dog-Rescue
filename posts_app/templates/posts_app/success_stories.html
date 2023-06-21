@@ -2,6 +2,11 @@
 
 
   <h1 class="h1-custom">Success Stories</h1>
+
+
+
+  <!-- 
+
   <div class="articles">
     {% for post in posts %}
     <div class="artile">
@@ -9,12 +14,150 @@
         <img src="{{ post.thumbnail.url }}">
       </div>
       <h2 class="caption">{{post.title}}</h2>
-      <p>{{post.snippet}}</p>
+      <p></p>
       <p>{{post.date}}</p>
       <a href="{% url 'post_detail' slug=post.slug %}">Read More</a>
     </div>
     {% endfor %}
   </div>
+ -->
+<!-- ///////////// -->
+ 
+
+
+
+  
+      <style>
+        
+        .card-img-overlay {
+
+          opacity: 0;
+          transition: opacity 0.3s;
+        }
+       
+    
+        .card:hover .card-img-overlay {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          opacity: 1;
+        }
+        .card:hover .imgg{
+          transition: all 0.5s ease-in-out;
+          transform: scale(1.06);
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          
+        }
+
+
+        .card-img-overlay {
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: opacity 0.3s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 9.4rem;
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card:hover .card-img-overlay {
+      opacity: 1;
+    }
+
+    .card-img-overlay a {
+      /* margin-bottom: 1rem; */
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+
+    .custom-bg {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      background-color: #A0C49D; /* Replace with your desired RGB values */
+      /* color: #fff; */
+      
+    }
+    .ct{overflow: hidden;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+  
+    }
+
+    .card-img {
+height: 300px;
+width: 100%;
+/* padding: 10px 10px; */
+      object-fit: cover;
+    }
+    /* .row{
+      margin: 3rem 2rem 5rem 5rem ;
+    } */
+/* .cont{
+  padding: 2rem 5rem;
+} */
+.imgg{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+}
+
+      </style>
+   
+    
+    <body>
+      <div class="row    justify-content-md-center  ">
+
+        {% for post in posts %}
+        <div class="col-12  col-md-6 col-lg-4   align-self justify-content-md-center ">
+      <div class="container  my-5 lg-my-5 md-my-0">
+        <div class="card " style=" max-width: 25rem;">
+        <div class="ct">
+
+          <img src="{{ post.thumbnail.url }}" class="card-img imgg" alt="Dog Image">
+          <div class="card-img-overlay">
+            <a  class="btn btn-primary" href="{% url 'post_detail' slug=post.slug %}">Read More</a>
+          </div>
+
+
+        </div>
+          <div class="card-body custom-bg">
+            
+    <h5 class="card-title">{{post.title}}</h5>
+            <p class="card-text">{{post.snippet}}</p>
+            <p class="card-text">{{post.date}}</p>
+            
+
+          </div>
+          
+        </div>
+      </div>
+      </div>
+      {% endfor %}
+</div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+  </div>
+
+
+
+
+
+
+
 
 
 {% endblock content %}
+

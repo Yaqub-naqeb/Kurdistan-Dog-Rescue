@@ -1,6 +1,15 @@
+
+*{
+  font-family: 'Nunito', sans-serif;
+/* font-family: 'Poppins', sans-serif; */
+}
+
+
 body {
   background-color: #f7ffe5;
 }
+
+
 
 footer {
   padding: 4rem;
