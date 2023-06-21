@@ -1,10 +1,24 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'accounts_app/base.html' %} {% block content %}
+<img src="/static/assets/bones_footsteps.png" class="img-bones_footsteps opacity-50">
 
-<h1>Sign</h1>
-<form class="site-form" action="/accounts/register/" method="post">
+{% if form.errors %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    Registration Unsuccessful 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{{ form.error }}
+{% endif %}
+
+
+  
+
+<div class="shadow p-4 mb-5 form rounded">
+<center><h1>Register</h1></center>
+<form class="site-form" action="{% url 'register' %}" method="post">
     {% csrf_token %}
-    {{form}}
-<input type="submit" value="Sign Up">
+    {{form.as_p}}
+<input type="submit" class="btn btn-warning" value="Register">
 </form>
+</div>
 
 {% endblock content %}

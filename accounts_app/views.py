@@ -2,31 +2,43 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
+from .form import RegisterUserForm
 
 # Create your views here.
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = RegisterUserForm(request.POST)
         if form.is_valid():
             user = form.save()
+            # clean the data
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password1']
             # log the user in
+            user = authenticate(username=username, password=password)
             login(request, user)
-            return redirect('posts_app:success_stories')
+            messages.success(request, ('Registration Successful!'))
+            return redirect('success_stories')
         
     else:
-        form = UserCreationForm()
+        form = RegisterUserForm()
+        messages.success(request, ("There was an error logging in, please try again."))
     context = {'form': form}
     return render(request, 'accounts_app/register.html', context)
 
 
 def log_in(request):
     if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
-        if form.is_valid():
-            # log in the user
-            user = form.get_user()
+        username = request.POST["username"]
+        password = request.POST["password"]
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
             login(request, user)
-            # return redirect('app_name:success_stories')
+            # Redirect to a success page.
+            return redirect('home')
+        else:
+            # Return an 'invalid login' error message.
+            messages.success(request, ("There was an error logging in, please try again."))
+            return redirect('login')
             
     else:
         form = AuthenticationForm()
@@ -34,6 +46,6 @@ def log_in(request):
     return render(request, 'accounts_app/login.html', context)
 
 def log_out(request):
-    if request.method == 'POST':
-        logout(request)
-        # return redirect('main_app:home')
+    logout(request)
+    messages.success(request, ("You were logged out."))
+    return redirect('home')

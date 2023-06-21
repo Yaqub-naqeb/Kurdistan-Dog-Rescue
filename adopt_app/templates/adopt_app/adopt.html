@@ -2,22 +2,20 @@
 
 {% block content %}
 <h1 class="h1-custom">Hundreds of dogs to chooes from! Adopt your favorite furry friend now!</h1>
-    <div class="row">
+    <div class="row gy-3">
         {% for dog in dogs %}
       <div class="col-md-4">
         
-    <div class="card" style="width: 18rem">
+        
+    <div class="card text-center shadow">
         {% if dog.picture %}
-        <img src="{{ dog.picture.url }}" alt="Dog Picture" style="height: 250px; width: 250px;"/>
+        <center class="card-img-bg"><img src="{{ dog.picture.url }}" alt="Dog Picture" style="height: 300px; width: 300px;" class="card-img-top card-img-bg"/></center>
         {% endif %}
       <div class="card-body">
         <h5 class="card-title">{{ dog.name }}</h5>
         <p class="card-text">
-            <p>Breed: {{ dog.breed }}</p>
-            <p>Location: {{ dog.location }}</p>
-            <p>gender: {{ dog.gender }}</p>
-            <p>age: {{ dog.age }}</p>
-            <p>size: {{ dog.size }}</p>
+            <p>Age: {{ dog.age }} | Size: {{ dog.size }}</p>
+            
         </p>
         <a href="#" class="btn btn-warning">Adopt!</a>
       </div>
