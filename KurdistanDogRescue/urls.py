@@ -22,9 +22,13 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('accounts_app.urls')),
     path('', include('main_app.urls')),
     path('adopt/', include('adopt_app.urls')),
     path('success-stories/', include('posts_app.urls'))
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Configure Admin Titles
+admin.site.site_header = 'Kurdistan Dog Rescue Administration'

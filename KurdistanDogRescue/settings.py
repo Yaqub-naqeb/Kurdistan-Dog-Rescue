@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'main_app.apps.MainAppConfig',
     'adopt_app.apps.AdoptAppConfig',
     'posts_app.apps.PostsAppConfig',
+    'accounts_app.apps.AccountsAppConfig',
 ]
 
 MIDDLEWARE = [

@@ -5,14 +5,14 @@ body {
 footer {
     padding: 4rem;
     background-color: #A0C49D;
-    color: black;
+    color: #17594A;
 }
 
 /* Navigation Bar */
 
 .navbar-custom {
     background-color: #A0C49D;
-    color: black;
+    color: #17594A;
   }
 
  
@@ -20,21 +20,23 @@ footer {
 .navbar-brand {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
-    color: black;
+    color: #17594A;
+    font-weight: bold;
 }
 
 .nav-link {
     font-size: 1.2rem;
-    color: black;
+    color: #17594A;
+    font-weight: bold;
 }
 
 .navbar-brand:hover {
-    color: black;
+    color: #ffc107;
 }
 
 .nav-link:hover {
-    color: black;
-    background-color: yellow;
+    color: white;
+    background-color: #ffc107;
     border-radius: 10px;
 }
 
@@ -50,6 +52,7 @@ footer {
 .hero-section {
     background-color: #A0C49D;
     padding: 80px 0;
+    color: #17594A;
   }
   
 .hero-title {
@@ -70,4 +73,44 @@ max-height: 400px;
 object-fit: cover;
 border-radius: 8px;
 }
+
+main {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-custom {
+    border: 2px solid #17594A;
+    color: #17594A;
+    background-color: #A0C49D;
+}
+
+.btn {
+    color: #17594A;
+}
+
+.h1-custom {
+    text-align: center;
+    margin: 2rem;
+}
+
+/* thumbainl style */
+.thumbnail {
+    display: inline-block;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
   
+.thumbnail img {
+display: block;
+width: 100%;
+height: 200px;
+border-radius: 5px;
+}
+
+.thumbnail .caption {
+margin-top: 5px;
+text-align: center;
+}
