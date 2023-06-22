@@ -14,7 +14,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+  <style>
+    .btn{
+      background-color:#5C874D;
+     color: #FFFFFF;
+      /* background-color:#CCCCCC;*/
+      border:0; 
+margin: 0 5px;
+      
+    }
+    .btn:hover{
+      background-color: #87B573;
+   
+      /* background-color: #9D83A0; */
+
+    }
+  </style>
 </head>
 
 <body>
@@ -30,7 +45,7 @@
         {% for message in messages %}
           <div class="alert alert-warning alert-dismissible fade show" role="alert">
              {{message}}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <button type="button" class="btn-close btn" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
         {% endfor %}
       {% endif %}

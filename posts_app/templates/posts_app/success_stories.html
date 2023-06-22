@@ -58,7 +58,7 @@
       top: 0;
       left: 0;
       right: 0;
-      bottom: 9.4rem;
+      bottom: 9.1rem;
       border-bottom-left-radius: 0%;
       border-bottom-right-radius: 0%;
       display: flex;
@@ -74,15 +74,26 @@
     .card-img-overlay a {
       /* margin-bottom: 1rem; */
       position: absolute;
-      top: 70%;
+      top: 60%;
       left: 50%;
       transform: translateX(-50%);
+      background-color:#5C874D;
+     color: #FFFFFF;
+      border: 0;
+
+    }
+    .card-img-overlay a:hover{
+      color:black;
+      background-color: #A0C49D;
+      border-color: #A0C49D;
+
 
     }
 
     .custom-bg {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+ 
       background-color: #A0C49D; /* Replace with your desired RGB values */
       /* color: #fff; */
       
@@ -112,6 +123,14 @@ width: 100%;
   border-bottom-right-radius: 0px;
 
 }
+.dt{
+  font-size: small;
+  color: rgba(0, 0, 0, 0.523);
+font-weight: normal;
+}
+.dis{
+  color: rgba(0, 0, 0, 0.627);
+}
 
       </style>
    
@@ -135,8 +154,8 @@ width: 100%;
           <div class="card-body custom-bg">
             
     <h5 class="card-title">{{post.title}}</h5>
-            <p class="card-text">{{post.snippet}}</p>
-            <p class="card-text">{{post.date}}</p>
+            <p class="card-text dis">{{post.snippet}}</p>
+            <p class="card-text  dt">{{post.date}}</p>
             
 
           </div>
