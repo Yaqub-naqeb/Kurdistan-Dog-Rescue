@@ -1,15 +1,11 @@
-
-*{
-  font-family: 'Nunito', sans-serif;
-/* font-family: 'Poppins', sans-serif; */
+* {
+  font-family: "Nunito", sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
 }
-
 
 body {
   background-color: #f7ffe5;
 }
-
-
 
 footer {
   padding: 4rem;
@@ -59,7 +55,7 @@ footer {
 }
 
 .card-body {
-  background-color: #C4D7B2;
+  background-color: #c4d7b2;
   border-radius: 10;
 }
 
@@ -93,6 +89,8 @@ main {
   padding-bottom: 4rem;
   min-height: 600px;
   color: #17594a;
+  /* here */
+  background-color: #a0c49d;
 }
 
 .btn-custom {
@@ -168,14 +166,14 @@ main {
 }
 
 .img-footsteps {
-    right: 20px;
-    position: absolute;
-    z-index: -1;
+  right: 20px;
+  position: absolute;
+  z-index: -1;
 }
 
 .img-bones_footsteps {
-    position: absolute;
-    z-index: -1;
+  position: absolute;
+  z-index: -1;
 }
 
 .img-bones_footsteps {
@@ -189,5 +187,6 @@ main {
 
 /* login form and registeration form style */
 .form {
-  background-color: #f7ffe5;
+  /* background-color: #f7ffe5; */
+  /* background-color: #a0c49d; */
 }
